@@ -1,0 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px);
+@import url(https://fonts.googleapis.com/css?family=Fredericka+the+Great);
+.Slabo{
+  font-family: 'Slabo 27px', serif;
+}
+.Frede{
+  font-family: 'Fredericka the Great', cursive;
+}
+.Fredericka{
+    @extend .Frede;
+    font-size: 70px;
+}
