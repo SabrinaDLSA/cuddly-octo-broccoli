@@ -1,7 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Slabo+27px);
 @import url(https://fonts.googleapis.com/css?family=Fredericka+the+Great);
+@import url(https://fonts.googleapis.com/css?family=Chewy);
 .Slabo{
   font-family: 'Slabo 27px', serif;
+}
+.Chewy{
+  font-family: 'Chewy', cursive;
 }
 .Frede{
   font-family: 'Fredericka the Great', cursive;
@@ -9,4 +13,17 @@
 .Fredericka{
     @extend .Frede;
     font-size: 70px;
+}
+.title{
+    @extend .Frede;
+    padding-top: 10%;
+    font-size: 100px;
+}
+.subtitle{
+    @extend .Chewy;
+    color: white;
+    margin-top: -3%;
+    font-size: 30px;
+    float: right;
+    margin-right: 25%;
 }

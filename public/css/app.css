@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Slabo+27px);
 @import url(https://fonts.googleapis.com/css?family=Fredericka+the+Great);
+@import url(https://fonts.googleapis.com/css?family=Chewy);
 .white {
   color: white; }
 
@@ -389,11 +390,25 @@ th {
 .Slabo {
   font-family: 'Slabo 27px', serif; }
 
-.Frede, .Fredericka {
+.Chewy, .subtitle {
+  font-family: 'Chewy', cursive; }
+
+.Frede, .Fredericka, .title {
   font-family: 'Fredericka the Great', cursive; }
 
 .Fredericka {
   font-size: 70px; }
+
+.title {
+  padding-top: 10%;
+  font-size: 100px; }
+
+.subtitle {
+  color: white;
+  margin-top: -3%;
+  font-size: 30px;
+  float: right;
+  margin-right: 25%; }
 
 meta.foundation-version {
   font-family: "/5.5.2/"; }

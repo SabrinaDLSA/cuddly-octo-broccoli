@@ -21,7 +21,7 @@ Route::get('/profile', [
 'uses'=>'UserController@index'
 ]);
 //Series Controller
-
+Route::resource('mail', 'MailController');
 Route::resource('serie', 'SeriesController');
 
 // Authentication routes...

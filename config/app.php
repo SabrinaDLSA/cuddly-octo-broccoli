@@ -144,6 +144,7 @@ return [
         series\Providers\AuthServiceProvider::class,
         series\Providers\EventServiceProvider::class,
         series\Providers\RouteServiceProvider::class,
+        'Illuminate\Html\HtmlServiceProvider',
 
     ],
 
@@ -193,6 +194,12 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+        'HTML'      => 'Illuminate\Html\HtmlFacade',
+        'Form'      => 'Illuminate\Html\FormFacade',
+        'Str'             => 'Illuminate\Support\Str',
+        'URL'             => 'Illuminate\Support\Facades\URL',
+        'Validator'       => 'Illuminate\Support\Facades\Validator',
+        'Controller' => 'Illuminate\Routing\Controller',
 
     ],
 

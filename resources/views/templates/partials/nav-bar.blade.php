@@ -12,7 +12,7 @@
         </ul>
         <section class="top-bar-section">
           <ul class="left">
-          <li class="active"><a href="#">Home</a></li>
+          <li class="active"><a href="{{route('home')}}">Home</a></li>
           <li class="has-dropdown">
             <a href="#">Series</a>
             <ul class="dropdown">
