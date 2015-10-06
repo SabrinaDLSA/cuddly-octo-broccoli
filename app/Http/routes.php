@@ -22,8 +22,14 @@ Route::get('/profile', [
 ]);
 //Series Controller
 Route::resource('mail', 'MailController');
+Route::resource('/admin', 'AdminController');
 Route::resource('serie', 'SeriesController');
-
+Route::get('music', [
+  'as'=>  'music',
+  'uses'=>'WelcomeController@music']);
+Route::get('comic', [
+  'as' => 'comic',
+  'uses' =>'WelcomeController@comic']);
 // Authentication routes...
 Route::get('login',[
   'as' => 'login',

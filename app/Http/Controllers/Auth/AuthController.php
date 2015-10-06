@@ -62,6 +62,12 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
-    protected $redirectPath = '/';
-    protected $loginPath = '/profile';
+    public function loginPath()
+    {
+        return route('login');
+    }
+    public function redirectPath()
+    {
+        return route('home');
+    }
 }

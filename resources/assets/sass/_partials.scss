@@ -27,3 +27,7 @@ footer{
   width: 48px;
   height: auto;
 }
+.left_bar{
+  background-color: $navigat_bar;
+  border-right: 5px solid $navigat_bar_border;
+}

@@ -33,6 +33,10 @@ footer {
   width: 48px;
   height: auto; }
 
+.left_bar {
+  background-color: #537EFF;
+  border-right: 5px solid #3F71FF; }
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.

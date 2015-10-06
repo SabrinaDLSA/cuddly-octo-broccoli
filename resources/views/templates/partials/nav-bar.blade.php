@@ -25,8 +25,8 @@
           </li>
         </ul>
           <ul class="left">
-            <li><a href="#">Music</a></li>
-            <li><a href="#">Comic</a></li>
+            <li><a href="{{route('music')}}">Music</a></li>
+            <li><a href="{{route('comic')}}">Comic</a></li>
             <li><a href="#">Actors</a></li>
             <li><a href="#">Characters</a></li>
           </ul>

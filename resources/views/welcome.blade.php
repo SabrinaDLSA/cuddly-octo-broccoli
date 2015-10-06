@@ -34,6 +34,9 @@
         </div>
       </div>
     </div>
+     <div class="large-12 columns">
+              <hr>
+      </div>
 @endsection
 @section('footer')
   @include('templates.partials.footer')

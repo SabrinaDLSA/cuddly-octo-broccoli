@@ -5,9 +5,14 @@ namespace series\Http\Controllers;
 use Illuminate\Http\Request;
 use series\Http\Requests;
 use series\Http\Controllers\Controller;
-use series\Series;
-class WelcomeController extends Controller
+
+class AdminController extends Controller
 {
+      public function __construct()
+    {
+      $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,17 +20,9 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        $series = \DB::table('series')->limit(8)->get();
-        return view('welcome')->with('series', $series);
+        return view('admin');
     }
-    public function music()
-    {
-        return view('music');
-    }
-    public function comic()
-    {
-        return view('comic');
-    }
+
     /**
      * Show the form for creating a new resource.
      *
