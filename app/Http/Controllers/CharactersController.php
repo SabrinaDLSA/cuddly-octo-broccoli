@@ -1,14 +1,12 @@
 <?php
+
 namespace series\Http\Controllers;
+
 use Illuminate\Http\Request;
 use series\Http\Requests;
 use series\Http\Controllers\Controller;
-use Illuminate\Validation\Factory;
-use series\Genre;
-use series\Series;
-use series\Series_info;
-use Redirect;
-class SeriesController extends Controller
+
+class CharactersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,13 +15,9 @@ class SeriesController extends Controller
      */
     public function index()
     {
-        return view('list.series');
+        //
     }
 
-      public function __construct()
-    {
-      $this->middleware('auth');
-    }
     /**
      * Show the form for creating a new resource.
      *
@@ -31,8 +25,7 @@ class SeriesController extends Controller
      */
     public function create()
     {
-        $genre = Genre::lists('name', 'id');
-        return view('create.serie')->with('genre', $genre);
+        //
     }
 
     /**
@@ -43,17 +36,7 @@ class SeriesController extends Controller
      */
     public function store(Request $request)
     {
-      $serie = new Series;
-      $serie->name = $request->name;
-      $serie->photo = $request->photo;
-      $serie_info = new Series_info;
-      $serie_info->description = $request->description;
-      $serie_info->genre = $request->genre;
-      $serie_info->start = $request->start;
-      $serie_info->finish = $request->finish;
-      $serie->save();
-      $serie_info->save();
-      return Redirect::back();
+        //
     }
 
     /**

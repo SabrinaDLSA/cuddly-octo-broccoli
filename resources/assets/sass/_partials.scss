@@ -29,5 +29,11 @@ footer{
 }
 .left_bar{
   background-color: $navigat_bar;
+  padding-left: -10px;
+  margin-left: -15px;
+  margin-bottom: -2px;
   border-right: 5px solid $navigat_bar_border;
+}
+textarea {
+  height:300px;
 }

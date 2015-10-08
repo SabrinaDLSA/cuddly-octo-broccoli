@@ -1,7 +1,5 @@
 <?php
-
 namespace series\Http\Controllers;
-
 use Illuminate\Http\Request;
 use series\Http\Requests;
 use Mail;

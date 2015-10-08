@@ -1,5 +1,4 @@
 <div class="row">
-
 </div>
 <footer class="footer">
   <div class="row">
@@ -14,10 +13,10 @@
         <li class="white">sabrina@gmail.com </li>
       </ul>
         <ul class="inline-list">
-          <li><a href="#"><img class="img_red" src="img/Icons/facebook.png" alt="" /></a></li>
-          <li><a href="#"><img class="img_red" src="img/Icons/twitter.png" alt="" /></a></li>
-          <li><a data-reveal-id="Email"  href="#"><img class="img_red" src="img/Icons/email.png" alt="" /></a></li>
-          <li><a href="#"><img class="img_red" src="img/Icons/skype.png" alt="" /></i></a></li>
+          <li><a href="#"><img class="img_red" src="/img/Icons/facebook.png" alt="" /></a></li>
+          <li><a href="#"><img class="img_red" src="/img/Icons/twitter.png" alt="" /></a></li>
+          <li><a data-reveal-id="Email"  href="#"><img class="img_red" src="/img/Icons/email.png" alt="" /></a></li>
+          <li><a href="#"><img class="img_red" src="/img/Icons/skype.png" alt="" /></i></a></li>
         </ul>
       </div>
     </div>

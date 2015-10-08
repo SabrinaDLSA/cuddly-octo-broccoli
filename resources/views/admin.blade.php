@@ -7,15 +7,8 @@
 @endsection
 @section('content')
 <div data-equalizer>
-  <div class="large-2 columns " data-equalizer-watch>
-    <nav class="left_bar">
-      <ul class="off-canvas-list collapse">
-        <li><label>Admin Actions</label></li>
-        <li><a href="#">Insert</a></li>
-        <li><a href="#">List</a></li>
-        <li><a href="#">New</a></li>
-      </ul>
-    </nav>
+  <div class="large-2 columns" data-equalizer-watch>
+    @include('templates.partials.admin-nav')
   </div>
   <div class="large-10 columns" data-equalizer-watch>
     <div class="row">

@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -10,7 +9,6 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
 Route::get('/', [
 'as' => 'home',
 'uses'=>'WelcomeController@index'
@@ -23,7 +21,10 @@ Route::get('/profile', [
 //Series Controller
 Route::resource('mail', 'MailController');
 Route::resource('/admin', 'AdminController');
-Route::resource('serie', 'SeriesController');
+Route::resource('series', 'SeriesController');
+Route::resource('actors', 'ActorsController');
+Route::resource('characters', 'CharactersController');
+Route::resource('genre', 'GenreController');
 Route::get('music', [
   'as'=>  'music',
   'uses'=>'WelcomeController@music']);
