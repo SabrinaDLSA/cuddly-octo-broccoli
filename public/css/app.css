@@ -1,11 +1,24 @@
 @import url(https://fonts.googleapis.com/css?family=Slabo+27px);
 @import url(https://fonts.googleapis.com/css?family=Fredericka+the+Great);
 @import url(https://fonts.googleapis.com/css?family=Chewy);
+.imagen_cuadrada {
+  height: 150px; }
+
+.muestra_cuadrada {
+  float: left; }
+
 .white {
   color: white; }
 
 .blue {
   color: #4B57FF; }
+
+.grey {
+  background-color: #A7B2C2; }
+
+.grey_text {
+  -webkit-text-decoration-color: grey;
+  text-decoration-color: grey; }
 
 header {
   background-image: url("../img/cover.jpg");

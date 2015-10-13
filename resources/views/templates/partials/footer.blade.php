@@ -45,11 +45,9 @@
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 <div id="Email" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-  <h2 id="modalTitle">Contact Us</h2>
-  <p class="lead">Your couch.  It is mine.</p>
   <div class="" align="center">
             {!! Form::open(['route'=>'mail.store', 'method' => 'POST']) !!}
-            <fieldset>
+            <fieldset><legend>Contact Us</legend>
               <div class="row">
                 <div class="large-6 columns">
                     {!! Form::text('Name', null, ['placeholder' => 'Name', 'class' => 'form-control']) !!}
@@ -58,15 +56,13 @@
                     {!! Form::text('Email', null, ['placeholder' => 'Email', 'class' => 'form-control']) !!}
                 </div>
               </div>
-                <br>
-                <br>
                 <div class="row">
                   <div class="large-12 columns">
-                      {!! Form::textarea('Message', null, ['placeholder' => 'Message', 'class' => 'form-control'])!!}
+                      {!! Form::textarea('Message', null, ['placeholder' => 'Write your message here!', 'class' => 'form-control'])!!}
                   </div>
                 </div>
                 <br>
-                {!! Form::submit('Save Changes' , array('class' => 'button')) !!}
+                {!! Form::submit('Save Changes' , array('class' => 'button small')) !!}
             </fieldset>
             {!! Form::close() !!}
           </div>

@@ -18,11 +18,11 @@ class CreateSeriesInfosTable extends Migration
             $table->text('description');
             $table->date('start');
             $table->date('finish');
-            $table->integer('info_id')->unsigned();
+            $table->integer('series_id')->unsigned();
             $table->timestamps();
 
-            $table->foreign('info_id')
-                  ->references('id')->on('series_info')
+            $table->foreign('series_id')
+                  ->references('id')->on('series')
                   ->onDelete('cascade');
         });
     }

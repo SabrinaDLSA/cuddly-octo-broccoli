@@ -58,7 +58,9 @@
               </label>
             </div>
           </div>
-          {!! Form::submit('Save Changes' , array('class' => 'button')) !!}
+          <div class="" align="center">
+            {!! Form::submit('Save Changes' , array('class' => 'button')) !!}
+          </div>
           </fieldset>
         </div>
         {!! Form::close() !!}

@@ -24,8 +24,8 @@ class SeriesController extends Controller
 
         public function __construct()
       {
-        $this->middleware('auth');
-        $this->middleware('is_admin');
+        $this->middleware('auth',['except' => array('show')]);
+        $this->middleware('is_admin', ['except' => array('show')]);
       }
     /**
      * Show the form for creating a new resource.
@@ -66,6 +66,8 @@ class SeriesController extends Controller
       $serie_info->start = $request->start;
       $serie_info->finish = $request->finish;
       $serie->save();
+      $s =  \DB::table('series')->max('id');
+      $serie_info->series_id = $s;
       $serie_info->save();
       return Redirect::to('/admin');
     }
@@ -78,7 +80,9 @@ class SeriesController extends Controller
      */
     public function show($id)
     {
-        //
+        $serie = \DB::table('series')->where('id', $id)->first();
+        $serie_info = \DB::table('series_infos')->where('series_id', $id)->first();
+        return view('show.serie')->with('serie', $serie)->with('serie_info', $serie_info);
     }
 
     /**

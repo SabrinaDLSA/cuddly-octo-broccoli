@@ -10,7 +10,7 @@
     </li>
     <li><a href="#" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" >Actors</a>
       <ul id="drop1"class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
-        <li><a href="{{route('series.show')}}">List Serie</a></li>
+        <li><a class="grey_text" href="{{route('series.show')}}">List Serie</a></li>
         <li><a href="{{route('actors.show')}}">List Actor</a></li>
         <li><a href="{{route('characters.show')}}">List Character</a></li>
       </ul>

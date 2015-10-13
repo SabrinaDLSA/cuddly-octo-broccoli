@@ -15,7 +15,7 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        $series = \DB::table('series')->limit(8)->get();
+        $series = \DB::table('series')->orderby('created_at', 'desc')->limit(8)->get();
         return view('welcome')->with('series', $series);
     }
     public function music()
