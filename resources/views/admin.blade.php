@@ -7,10 +7,11 @@
 @endsection
 @section('content')
 <div data-equalizer>
-  <div class="large-2 columns" data-equalizer-watch>
+  <div class="large-2 columns left_bar" data-equalizer-watch>
     @include('templates.partials.admin-nav')
   </div>
   <div class="large-10 columns" data-equalizer-watch>
+    @include('templates.partials.alerts')
     <div class="row">
       <div class="large- columns">
           <h2 align="center" id="subtitle">Last Updated Series</h2>

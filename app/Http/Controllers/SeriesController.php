@@ -1,6 +1,7 @@
 <?php
 namespace series\Http\Controllers;
 use Illuminate\Http\Request;
+use series\Http\Requests\StoreSeriesCreateRequest;
 use series\Http\Requests;
 use series\Http\Controllers\Controller;
 use Illuminate\Validation\Factory;
@@ -8,6 +9,7 @@ use series\Genre;
 use series\Series;
 use series\Series_info;
 use Redirect;
+use IsAdmin;
 class SeriesController extends Controller
 {
     /**
@@ -20,10 +22,11 @@ class SeriesController extends Controller
         return view('list.series');
     }
 
-      public function __construct()
-    {
-      $this->middleware('auth');
-    }
+        public function __construct()
+      {
+        $this->middleware('auth');
+        $this->middleware('is_admin');
+      }
     /**
      * Show the form for creating a new resource.
      *
@@ -32,7 +35,11 @@ class SeriesController extends Controller
     public function create()
     {
         $genre = Genre::lists('name', 'id');
-        return view('create.serie')->with('genre', $genre);
+        if (!$genre->isEmpty()) {
+          return view('create.serie')->with('genre', $genre);
+        }
+        \Session::flash('alert', 'You must add a Genre before creating a new serie');
+        return Redirect::back();
     }
 
     /**
@@ -41,11 +48,18 @@ class SeriesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreSeriesCreateRequest $request)
     {
+      $file = $request->file('file');
+       //obtenemos el nombre del archivo
+      $nombre = $file->getClientOriginalExtension();
+      $snake = $request->name;
+      $snake = snake_case($snake);
+         //indicamos que queremos guardar un nuevo archivo en el disco local
+      \Storage::disk('local')->put($snake.'.'.$nombre,  \File::get($file));
       $serie = new Series;
       $serie->name = $request->name;
-      $serie->photo = $request->photo;
+      $serie->photo = $snake.'.'.$nombre;
       $serie_info = new Series_info;
       $serie_info->description = $request->description;
       $serie_info->genre = $request->genre;
@@ -53,7 +67,7 @@ class SeriesController extends Controller
       $serie_info->finish = $request->finish;
       $serie->save();
       $serie_info->save();
-      return Redirect::back();
+      return Redirect::to('/admin');
     }
 
     /**

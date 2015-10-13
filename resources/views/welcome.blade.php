@@ -13,7 +13,7 @@
           <h2 align="center" id="subtitle">Last Updated Series</h2>
           @foreach($series as $s)
             <div class="large-3 small-6 columns">
-              <img src="http://placehold.it/250x250&text=Thumbnail"/>
+              <img src="/storage/{{$s->photo}}"/>
               <h6 class="panel">{{$s->name}}</h6>
             </div>
           @endforeach

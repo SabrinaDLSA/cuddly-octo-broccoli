@@ -43,6 +43,9 @@ footer {
   margin-bottom: -2px;
   border-right: 5px solid #3F71FF; }
 
+.left_bar_nav {
+  margin-right: -15px; }
+
 textarea {
   height: 300px; }
 

@@ -41,6 +41,7 @@ class GenreController extends Controller
         $name =$request->get('name');
         $genre = Genre::firstOrNew(array('name' =>  $name));
         $genre->save();
+        \Session::flash('success', 'The Genre was successfully created!');
         return Redirect::back();
     }
 

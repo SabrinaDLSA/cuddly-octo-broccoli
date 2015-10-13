@@ -33,12 +33,14 @@
             <div class="small-8 large-centered columns">
                 Email
                 <input type="email" name="email" value="{{ old('email') }}">
+                @if ($errors->has('email'))<p style="color:red;">{!!$errors->first('email')!!}</p>@endif
               </div>
           </div>
           <div class="row">
             <div class="small-8 large-centered columns">
               Password
               <input type="password" name="password" id="password">
+              @if ($errors->has('password'))<p style="color:red;">{!!$errors->first('password')!!}</p>@endif
           </div>
         </div>
         <div class="row">
@@ -46,8 +48,8 @@
             <div class="row">
               <div class="large-6 columns">
                 <div class="row">
-                  <div class="large-3 columns"></div>
-                  <div class="large-9 columns">
+                  <div class="large-6 columns"></div>
+                  <div class="large-6 columns">
                     <input type="checkbox" name="remember"> Remember Me
                   </div>
                 </div>
@@ -68,7 +70,8 @@
     </fieldset>
   </div>
 </div>
-
+<br>
+<hr>
 @endsection
 @section('footer')
   @include('templates.partials.footer')

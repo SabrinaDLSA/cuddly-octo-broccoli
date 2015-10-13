@@ -1,7 +1,6 @@
 <?php
 
 namespace series\Http\Controllers;
-
 use Illuminate\Http\Request;
 use series\Http\Requests;
 use series\Http\Controllers\Controller;
@@ -11,6 +10,7 @@ class AdminController extends Controller
       public function __construct()
     {
       $this->middleware('auth');
+      $this->middleware('is_admin');
     }
 
     /**

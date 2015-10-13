@@ -3,7 +3,7 @@
         <ul class="title-area">
           <li class="name">
             <h1>
-              <a href="#">
+              <a href="{{route('home')}}">
                 Series.com
               </a>
             </h1>
@@ -45,9 +45,13 @@
             @if(!\Auth::check())
               <li><a href="{{route('login')}}"><i class="fa fa-sign-out"></i>Login</a></li>
             @else
+              @if(\Auth::user()->rol == 'admin')
+              <li><a href="/admin"><i class="fa fa-user"></i>Profile</a></li>
+              @else
               <li><a href="{{route('profile')}}"><i class="fa fa-user"></i>Profile</a></li>
+              @endif
               <li class="divider"></li>
-              <li><a href="{{route('login')}}"><i class="fa fa-sign-out"></i>Logout</a></li>
+              <li><a href="{{route('logout')}}"><i class="fa fa-sign-out"></i>Logout</a></li>
             @endif
             <li class="divider"></li>
           </ul>
